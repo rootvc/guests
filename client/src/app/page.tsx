@@ -1,4 +1,4 @@
-import Bluetooth from "@/app/components/Bluetooth";
+import Bluetooth from "@/app/components/bluetooth";
 
 export default function Home() {
   return (

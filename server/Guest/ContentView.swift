@@ -22,8 +22,7 @@ struct ContentView: View {
                 state.ble.toggle()
             }
             if state.isStarted {
-                Text("ID: `\(BLE.ID.name)`").textSelection(.enabled)
-                Text("UUID: `\(BLE.ID.uuid)`").textSelection(.enabled)
+                Text("Name: `\(BLE.Name)`").textSelection(.enabled)
             }
         }
         .padding()
