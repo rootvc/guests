@@ -25,7 +25,8 @@ class BLE: NSObject, CBPeripheralManagerDelegate {
     }
     
     func advertise() {
-        self.peripheral!.startAdvertising([CBAdvertisementDataLocalNameKey: self.region.identifier, CBAdvertisementDataServiceUUIDsKey: [self.region.uuid]])
+        self.peripheral!.add(CBMutableService(type: CBUUID(nsuuid: self.region.uuid), primary: true))
+        self.peripheral!.startAdvertising([CBAdvertisementDataLocalNameKey: NSString(string: self.region.identifier), CBAdvertisementDataServiceUUIDsKey: [CBUUID(nsuuid: self.region.uuid)]])
         
     }
     
