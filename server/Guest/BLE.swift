@@ -97,7 +97,6 @@ class BLE: NSObject, CBPeripheralManagerDelegate {
             return
         }
         
-        // Check for name on Clerk, and create code
         if let user = clients[request.central] {
             request.value = user.code;
             peripheral.respond(to: request, withResult: CBATTError.Code.success)
